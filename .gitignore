@@ -3,6 +3,11 @@
 
 # Log file
 *.log
+.watcher.pid
+
+# Python bytecode
+__pycache__/
+*.py[cod]
 
 # BlueJ files
 *.ctxt
