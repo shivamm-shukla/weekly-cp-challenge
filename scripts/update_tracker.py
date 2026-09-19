@@ -159,7 +159,7 @@ def update_root_readme(repo_root, week_stats):
     )
 
     if pattern.search(existing_content):
-        new_content = pattern.sub(tracker_table, existing_content)
+        new_content = pattern.sub(lambda _: tracker_table, existing_content)
     else:
         # Append tracker to the README
         sep = "\n\n" if existing_content and not existing_content.endswith("\n\n") else ""
