@@ -9,7 +9,7 @@ The goal is to maintain consistency, analyze time and space complexity, and buil
 <!-- AUTO-TRACKER:START -->
 | Week | Problems | Main.java | input.txt | Completed | Status |
 | :--- | :---: | :---: | :---: | :---: | :--- |
-| week-1 | 4 | 2 | 2 | 2/4 | In Progress |
+| week-1 | 4 | 3 | 3 | 3/4 | In Progress |
 | week-2 | 0 | 0 | 0 | 0/0 | Not Started |
 <!-- AUTO-TRACKER:END -->
 
