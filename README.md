@@ -11,7 +11,7 @@ The goal is to maintain consistency, analyze time and space complexity, and buil
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | week-1 | 4 | 4 | 4 | 4/4 | Completed |
 | week-2 | 0 | 0 | 0 | 0/0 | Not Started |
-| week-3 | 4 | 2 | 4 | 2/4 | In Progress |
+| week-3 | 4 | 3 | 4 | 3/4 | In Progress |
 <!-- AUTO-TRACKER:END -->
 
 ## Repository Structure
