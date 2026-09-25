@@ -104,7 +104,7 @@ class InotifyWatcher:
             return False
         if len(parts) == 1 and parts[0].startswith("week-"):
             return True
-        if len(parts) == 2 and parts[0].startswith("week-") and parts[1].startswith("problem-"):
+        if len(parts) >= 2 and parts[0].startswith("week-") and parts[1].startswith("problem-"):
             return True
         return False
 

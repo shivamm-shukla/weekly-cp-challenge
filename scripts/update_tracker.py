@@ -92,9 +92,17 @@ def scan_repository(repo_root):
 
             main_java = os.path.join(p_path, "Main.java")
             input_txt = os.path.join(p_path, "input.txt")
+            tests_dir = os.path.join(p_path, "tests")
 
             has_main = os.path.isfile(main_java) and os.path.getsize(main_java) > 0
-            has_input = os.path.isfile(input_txt)
+            has_input = os.path.isfile(input_txt) or (
+                os.path.isdir(tests_dir)
+                and any(
+                    f.endswith(".in")
+                    for _, _, files in os.walk(tests_dir)
+                    for f in files
+                )
+            )
 
             if has_main:
                 has_main_count += 1

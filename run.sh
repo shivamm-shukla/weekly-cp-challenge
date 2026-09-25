@@ -25,9 +25,14 @@ if [ ! -f "$MAIN_FILE" ]; then
 fi
 
 if [ ! -f "$INPUT_FILE" ]; then
-    echo "Error: '$INPUT_FILE' not found." >&2
+    if [ -d "$TARGET_DIR/tests" ]; then
+        SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+        exec "$SCRIPT_DIR/run_tests.sh" "$TARGET_DIR"
+    fi
+    echo "Error: Neither '$INPUT_FILE' nor '$TARGET_DIR/tests' found." >&2
     exit 1
 fi
+
 
 # Use a temporary directory for compiled .class files to avoid polluting the workspace
 TMP_BIN="$(mktemp -d /tmp/cp_runner_XXXXXX)"
